@@ -1,0 +1,70 @@
+.LayoutBox {
+  .LayoutSiderBox {
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    .logo {
+      height: 32px;
+      margin: 10px 16px 6px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+    }
+
+    .LayoutMenuBox {
+      padding-bottom: 16px;
+      height: 100%;
+      transition: 0.3s;
+      overflow-x: hidden;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      // firefox隐藏滚动条
+      scrollbar-width: none;
+      // chrome隐藏滚动条
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  .LayoutMainBox {
+    transition: all 0.2s;
+
+    .LayoutHeaderBox {
+      padding: 0 16px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      width: 100%;
+
+      .LayoutHeader_left {
+        .anticon {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .LayoutContentBox {
+      min-height: calc(100vh - 64px - 32px);
+      margin: 16px;
+      padding: 24px;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 0 10px 0 #e0e0e0;
+    }
+  }
+}

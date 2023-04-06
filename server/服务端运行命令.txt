@@ -1,0 +1,2 @@
+# 基本使用方法：
+json-server --watch ./db.json --port 5000
